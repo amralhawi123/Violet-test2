@@ -1,0 +1,231 @@
+:root{
+    --darck-color: #331e47;
+    --green-color: #33d1cc; 
+    --brown-color: #d3ac67; 
+}
+a{
+    text-decoration: none;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+.main-btn{
+    background-color: var(--darck-color);
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: 6px;
+}
+
+.main-title{
+    font-weight: 700;
+    font-size: 25px;
+    color: var(--darck-color);
+}
+.main-title::after{
+    content: '';
+    position: absolute;
+    background-color: var(--brown-color);
+    height: 3px;
+    width: 100px;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* start navbar */
+.navbar{
+    background-color: var(--darck-color);
+}
+.navbar .navbar-nav .nav-link{
+    color: white;
+}
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover{
+    color: var(--brown-color);
+}
+.logo { 
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-brand img{
+    width: 90px;
+}
+.navbar-collapse { 
+    margin: auto !important;
+    flex-grow: 0 !important;
+}
+.login{
+    color: white;
+}
+.navbar .search{
+    border-left: 1px solid var(--green-color);
+}
+.navbar .search svg{
+    color: var(--green-color);
+}
+.navbar .navbar-toggler{
+    color: white;
+    font-size: 25px;
+    border-color: white;
+}
+.navbar .navbar-toggler:focus{
+box-shadow: none;
+}
+.links-nav img{
+    width: 30px;
+}
+@media (min-width:992px) {
+    .links-nav{
+        display: none;
+    }
+}
+/* End navbar */
+/* start slider */
+.slider {
+    background-image:url(/images/vilots/2.png) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 20px 0;
+}
+.slider::after {
+position: absolute;
+content: '';
+top: 0;
+left: 0;
+background-color: #331e4728;;
+width: 100%;
+height: 100%;
+}
+
+.slider img{ 
+    height: 650px;
+    width: 500px;
+}
+.carousel-item{
+    transform: translateX(30%);
+    z-index: 100;
+}
+@media (max-width:576px) {
+    .slider img{ 
+        height: 450px;
+        width: 300px;
+    }
+    .carousel-item{
+        transform: translateX(7%) !important;
+    }
+}
+@media (max-width:992px) {
+    .carousel-item{
+        transform: translateX(14%);
+    }
+}
+/* end slider */
+/* start products */
+.products{
+    text-align: center;
+}
+.products img{ 
+    height: 350px;
+}
+.card-title{
+    color: var(--dark-color);
+    font-weight: bold;
+}
+@media (max-width:576px) {
+    .card{
+        width: 22rem !important;
+    }
+}
+/* end products */
+/* start content */
+.content{ 
+    position: relative;
+}
+.content img{
+    width: 100%;
+    height: 500px; 
+}
+.content::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: #331e4728;;
+    width: 100%;
+    height: 100%;
+    }
+.content .box{ 
+position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+.content .box p{ 
+    font-size: 24px;
+    font-family: auto;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    width: 800px;
+    color: var(--darck-color); 
+}
+@media (max-width:576px) {
+    .content .box p{ 
+        font-size: 20px;
+        width: 300px; 
+    }
+}
+@media (max-width:992px) {
+    .content .box p{ 
+        font-size: 22px;
+        width: 400px; 
+    }
+}
+/* end info */
+/* start about */
+@media (max-width:576px) {
+    .about img{ 
+        height: 300px !important;
+        width: 360px !important;
+    }
+}
+@media (max-width:992px) {
+    .about img{ 
+        width: 500px;
+    }
+}
+/* end about */
+/* start footer */
+.footer{
+    background-color: var(--darck-color);
+}
+.footer .info img{
+width: 90px;}
+.footer .copyWrite > span{
+    color: var(--green-color);
+}
+.footer .copyWrite div span{
+    color: var(--brown-color);
+}
+.footer .contact ul svg{
+    width: 20px;
+    height: 20px;
+}
+.footer .facebook{
+    background-color: #1877f2;
+}
+.footer .twitter{
+    background-color: #1da1f2;
+}
+.footer .linkedin{
+    background-color: #0077b5;
+}
+.footer .youtube{
+    background-color: #ff0000;
+}
+
+/* end footer */
